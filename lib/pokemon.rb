@@ -25,7 +25,7 @@ class Pokemon
     new_pokemon = self.new(arr)
     new_pokemon.id = arr[0]
     new_pokemon.name = arr[1]
-    new_pokemon.name = arr[2]
+    new_pokemon.type = arr[2]
     binding.pry
   end
   
