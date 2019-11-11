@@ -3,11 +3,12 @@ class Pokemon
   
   attr_accessor :name, :type, :id, :db
   
-  def initialize(name, type, id=nil, db)
+  def initialize(id=nil)
     @id = id
     @name = name 
     @type = type
     @db = db
+    binding.pry
   end
   
   def self.save(name, type, db)
