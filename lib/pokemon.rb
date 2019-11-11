@@ -1,7 +1,7 @@
 require 'pry'
 class Pokemon
   
-   attr_accessor :name, :type, :id, :db
+  attr_accessor :name, :type, :id, :db
   
   def initialize(id=nil)
     @id = id
@@ -15,7 +15,7 @@ class Pokemon
       INSERT INTO pokemon (name, type, db)
       VALUES (?, ?, ?)
     SQL
-    db.execute(sql, self.name, self.type)
+    db.execute(sql, name, type)
     binding.pry 
     @id = DB[:conn].execute("SELECT last_insert_rowid() FROM pokemon")[0][0]
   end
